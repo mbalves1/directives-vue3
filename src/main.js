@@ -1,4 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import clickOutsideDirective from './click-outside-directive.js'
 
-createApp(App).mount('#app')
+
+createApp(App)
+  .directive('click-outside', clickOutsideDirective)
+  .mount('#app')

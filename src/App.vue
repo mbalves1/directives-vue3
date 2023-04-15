@@ -1,17 +1,11 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h2>Click Outside</h2>
+  <div v-click-outside="handleClickedOutside" class="box">Here is some text</div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+const handleClickedOutside = () => alert("you clicked outside")
 </script>
 
 <style>
@@ -22,5 +16,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.box {
+  border: 1px solid black;
+  width: 200px;
+  margin: auto;
+  height: 100px;
+  padding: 20px;
 }
 </style>
